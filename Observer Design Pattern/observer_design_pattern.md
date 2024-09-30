@@ -35,11 +35,6 @@ The pattern involves two main entities:
 - **Potential for Memory Leaks**: Observers need to be unregistered from the subject when they are no longer needed. If not done, it may lead to memory leaks.
 - **Cascade Updates**: If an observer’s update logic triggers changes in another observer, this could lead to a cascading effect of updates, potentially causing unexpected behavior.
 
-## 7. Related Patterns
-- **Mediator Pattern**: Similar to Observer, but instead of all observers communicating directly with the subject, they communicate through a mediator.
-- **Publish-Subscribe Pattern**: A messaging pattern where publishers push messages to multiple subscribers (more abstract and decoupled than Observer).
-- **MVC Pattern**: The Observer Pattern is commonly used in the Model-View-Controller (MVC) architecture, where views observe the model for changes.
-
 ## Conclusion
 The Observer Pattern is useful when you need to decouple the relationship between a subject and multiple observers, allowing the subject to broadcast updates to its observers without knowing who or how many there are. 
 It’s great for real-time systems and notification-based architectures, though care must be taken to handle performance and memory management in complex systems.
